@@ -33,20 +33,20 @@ This is a React Native app built using Expo. The app includes user authenticatio
 
 ## Firebase Configuration
 
-Ensure you have a Firebase project set up. Replace the Firebase configuration in your code with the following:
+Ensure you have a Firebase project set up. Replace the Firebase configuration in your code with the following in app.json extra:
 
 ```javascript
-const firebaseConfig = {
-  apiKey: "AIzaSyAbdwNS8uqzmSPpwA9vpWsAuEnwDs53KI4",
-  authDomain: "itemhub.firebaseapp.com",
-  databaseURL:
-    "https://itemhub-687d8-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "itemhub-687d8",
-  storageBucket: "itemhub-687d8.appspot.com",
-  messagingSenderId: "601748750117",
-  appId:
-    "1:601748750117:web:BM4cMxd_Oqomv5Fy3Se5F8VlWsy0pvNusp-pd6C78w0xB4ZpdmY7yXF_6XvAg2KQg-dg8Z88JOU-WH6DFSFexWY",
-};
+"extra": {
+  "firebaseConfig" : {
+    "apiKey": "your keys ",
+    "authDomain": "your keys",
+    "databaseURL": "your keys",
+    "projectId": "your keys",
+    "storageBucket": "your keys",
+    "messagingSenderId": "your keys",
+    "appId": "your keys",
+  };
+}
 ```
 
 ## App Flow

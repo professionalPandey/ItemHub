@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   TextInput,
   Text,
@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useAuth } from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 import Container from "../components/Container";
 import { getDatabase, ref, set } from "firebase/database";
 import * as Device from "expo-device";
@@ -18,7 +18,7 @@ const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { setUser } = useAuth();
+  const { setUser } = useContext(AuthContext);
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
 

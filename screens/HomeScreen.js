@@ -3,6 +3,7 @@ import React, {
   useState,
   useCallback,
   useLayoutEffect,
+  useContext,
 } from "react";
 import {
   Text,
@@ -14,7 +15,7 @@ import {
   ActivityIndicator,
   Platform,
 } from "react-native";
-import { useAuth } from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 import { useNavigation } from "@react-navigation/native";
 import Container from "../components/Container";
 import { fetchUsers } from "../store/userSlice";
@@ -22,7 +23,7 @@ import LogoutButton from "../components/LogoutButton";
 import { useDispatch, useSelector } from "react-redux";
 
 const HomeScreen = () => {
-  const { user } = useAuth();
+  const { user } = useContext(AuthContext);
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const { users, loading, error, page, pageSize } = useSelector(

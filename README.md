@@ -1,7 +1,5 @@
 # Item hub
 
-## Description
-
 This is a React Native app built using Expo. The app includes user authentication (login and signup), a home screen with a user list, and a detailed user screen.
 
 ## Features
